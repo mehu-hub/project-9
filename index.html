@@ -16,14 +16,16 @@
 </head>
 
 <body>
-    <header class="container mx-auto md:py-16">
-        <nav class="container py-5 flex md:flex-row flex-col justify-between items-center w-[92%]  mx-auto">
-            <div>
-                <img class="w-[120px] cursor-pointer" src="icon/logo.png" alt="...">
+    <header class="container mx-auto md:py-10">
+        <nav class="container flex md:flex-row flex-col   justify-between mx-auto">
+            <div class="flex items-center ">
+                <img class="w-[80px] cursor-pointer" src="icon/logo.png" alt="...">
+                <p class="text-2xl mt-4 font-sans font-bold text-orange-400"><span class="text-[#669934]">TEA</span>
+                    HOUSE</p>
             </div>
             <div
                 class="nav-links hidden  bg-white duration-500 md:static absolute md:min-h-fit min-h-[30vh] left-0 top-[-100%] md:w-auto  w-full md:flex  px-5">
-                <ul class="flex md:flex-row  flex-col md:items-center md:gap-[4vw] gap-8">
+                <ul class="flex md:flex-row  flex-col items-center md:gap-[4vw] gap-8">
                     <li>
                         <a class="font-sans font-semibold hover:text-gray-500" href="#">Home</a>
                     </li>
@@ -34,16 +36,16 @@
                         <a class="font-sans font-semibold hover:text-gray-500" href="#">About Us</a>
                     </li>
                     <button
-                    class="mt-7 text-white font-semibold rounded-lg py-4 px-8 bg-gradient-to-r from-[#FF8938] to-[#F00]">
-                    Contact Us
-                </button>
+                        class="text-white font-semibold rounded-lg py-2 px-6 bg-gradient-to-r from-[#FF8938] to-[#F00]">
+                        Contact Us
+                    </button>
                 </ul>
-                <div class="flex items-center gap-6"> 
-                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden">
+                <div class="flex items-center gap-6">
+                    <ion-icon name="menu" class="text-3xl cursor-pointer md:hidden">
                     </ion-icon>
                 </div>
             </div>
-            
+
         </nav>
         <div class="md:flex flex-none justify-between items-center p-2">
             <div>
@@ -252,17 +254,55 @@
 
         </section>
     </main>
-    <footer>
+    <footer class="mt-[130px] h-auto md:h-[400px] bg-gradient-to-r flex flex-col from-[#f7dfcf] to-[#fdd1d1]">
+        <div class="container mx-auto flex md:flex-row gap-10 flex-col justify-between items-center mb-20 mt-20">
+            <div class="flex items-center">
+                <img class="w-[80px] cursor-pointer" src="icon/logo.png" alt="...">
+                <p class="text-2xl cursor-pointer mt-4 font-sans font-bold text-orange-400"><span
+                        class="text-[#669934]">TEA</span> HOUSE</p>
+            </div>
+            <h2 class="text-2xl text-[#777] font-bold">Ready to Get Strated ?</h2>
+            <button class="text-white font-semibold py-4 px-8 rounded-lg bg-gradient-to-r from-[#FF8938] to-[#F00]">
+                Connect Us
+            </button>
+        </div>
+        <div class="container p-5 mx-auto grid gap-5 grid-cols-2 md:grid-cols-4 justify-center">
+            <div>
+                <h2 class="text-[20px] font-semibold mb-2">Quick Links</h2>
+                <ul>
+                    <li class="text-gray-600">Home</li>
+                    <li class="text-gray-600">About us</li>
+                    <li class="text-gray-600">Insurance</li>
+                    <li class="text-gray-600">Privacy Policy</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-[20px] font-semibold mb-2">Our Service</h2>
+                <ul>
+                    <li class="text-gray-600">Life Insurance</li>
+                    <li class="text-gray-600">Car Insurance</li>
+                    <li class="text-gray-600">Health Insurance</li>
+                    <li class="text-gray-600">House Insurance</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-[20px] font-semibold mb-2">Help</h2>
+                <ul>
+                    <li class="text-gray-600">FAQ's</li>
+                    <li class="text-gray-600">Contact us</li>
+                    <div>
 
+                    </div>
+                </ul>
+            </div>
+            <div>
+                <h2 class="md:text-2xl text-xl font-bold md:text-end mb-2 text-[#777]">Subscribe our <br> Newsletter</h2>
+                <input class="md:py-4 py-2 rounded-lg px-4 md:px-6 w-full " type="email" placeholder="Your Email">
+            </div>
+
+        </div>
+        <h2></h2>
     </footer>
-
-    <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e) {
-            e.name = e.name === 'menu' ? 'close' : 'fa-bars'
-            navLinks.classList.toggle('top-[0%]')
-        }
-    </script>
 </body>
 
 </html>
