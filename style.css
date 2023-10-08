@@ -5,9 +5,7 @@
 }
 .heading-title{
     line-height: 80px;
-}
-
-
+} 
 @media screen and (max-width: 480px) {
      br{
         display: none;
