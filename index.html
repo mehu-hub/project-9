@@ -9,12 +9,42 @@
     <!-- tailwind css  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- icon  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/ce81d1d063.js" crossorigin="anonymous"></script>
     <title>Tea-House</title>
 </head>
 
 <body>
-    <header class="container mx-auto py-16">
+    <header class="container mx-auto md:py-16">
+        <nav class="container py-5 flex md:flex-row flex-col justify-between items-center w-[92%]  mx-auto">
+            <div>
+                <img class="w-[120px] cursor-pointer" src="icon/logo.png" alt="...">
+            </div>
+            <div
+                class="nav-links hidden  bg-white duration-500 md:static absolute md:min-h-fit min-h-[30vh] left-0 top-[-100%] md:w-auto  w-full md:flex  px-5">
+                <ul class="flex md:flex-row  flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="font-sans font-semibold hover:text-gray-500" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="font-sans font-semibold hover:text-gray-500" href="#">Products</a>
+                    </li>
+                    <li>
+                        <a class="font-sans font-semibold hover:text-gray-500" href="#">About Us</a>
+                    </li>
+                    <button
+                    class="mt-7 text-white font-semibold rounded-lg py-4 px-8 bg-gradient-to-r from-[#FF8938] to-[#F00]">
+                    Contact Us
+                </button>
+                </ul>
+                <div class="flex items-center gap-6"> 
+                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden">
+                    </ion-icon>
+                </div>
+            </div>
+            
+        </nav>
         <div class="md:flex flex-none justify-between items-center p-2">
             <div>
                 <h2 class="md:text-[80px] text-[60px] font-sans font-bold heading-title">It's good <br class="br">
@@ -198,21 +228,24 @@
                     <img class="bg-transparent w-full" src="images/news-1.png" alt="">
                     <p class="bg-transparent text-[#777] mt-2">Feb 05, 2027</p>
                     <h2 class="bg-transparent text-2xl font-bold mt-2">Collecting 8 points for <br> discount</h2>
-                    <p class="bg-transparent mt-2">There are many variations of passages of <br> Lorem Ipsum available.</p>
+                    <p class="bg-transparent mt-2">There are many variations of passages of <br> Lorem Ipsum available.
+                    </p>
                     <p class="bg-transparent font-bold mt-2">Learn More..</p>
                 </div>
                 <div class="p-5 rounded-xl border-4 border-gray-100">
                     <img class="bg-transparent w-full" src="images/news-2.png" alt="">
                     <p class="bg-transparent text-[#777] mt-2">Feb 05, 2027</p>
                     <h2 class="bg-transparent text-2xl font-bold mt-2">Collecting 8 points for <br> discount</h2>
-                    <p class="bg-transparent mt-2">There are many variations of passages of <br> Lorem Ipsum available.</p>
+                    <p class="bg-transparent mt-2">There are many variations of passages of <br> Lorem Ipsum available.
+                    </p>
                     <p class="bg-transparent font-bold mt-2">Learn More..</p>
                 </div>
                 <div class="p-5 rounded-xl border-4 border-gray-100">
                     <img class="bg-transparent w-full" src="images/news-3.png" alt="">
                     <p class="bg-transparent text-[#777] mt-2">Feb 05, 2027</p>
                     <h2 class="bg-transparent text-2xl font-bold mt-2">Collecting 8 points for <br> discount</h2>
-                    <p class="bg-transparent mt-2">There are many variations of passages of <br> Lorem Ipsum available.</p>
+                    <p class="bg-transparent mt-2">There are many variations of passages of <br> Lorem Ipsum available.
+                    </p>
                     <p class="bg-transparent font-bold mt-2">Learn More..</p>
                 </div>
             </div>
@@ -220,8 +253,16 @@
         </section>
     </main>
     <footer>
-        
+
     </footer>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'fa-bars'
+            navLinks.classList.toggle('top-[0%]')
+        }
+    </script>
 </body>
 
 </html>
